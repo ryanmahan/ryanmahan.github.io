@@ -1,5 +1,6 @@
-body {
+html {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,612ae0+100 */
+  background-size: cover;
   background: #1e5799; /* Old browsers */
   background: -moz-linear-gradient(-45deg, #1e5799 0%, #612ae0 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #1e5799 0%,#612ae0 100%); /* Chrome10-25,Safari5.1-6 */
@@ -28,4 +29,8 @@ nav {
 .whitetext {
   font-size: 1.5em;
   color: whitesmoke;
+}
+
+.mobiletext {
+  font-size: 3em;
 }
