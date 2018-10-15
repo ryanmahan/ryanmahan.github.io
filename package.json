@@ -1,0 +1,22 @@
+{
+  "name": "ryanlmahan",
+  "version": "0.0.1",
+  "description": "A personal website for Ryan Mahan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ryanmahan/ryanlmahan.git"
+  },
+  "author": "Ryan Mahan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanmahan/ryanlmahan/issues"
+  },
+  "homepage": "https://github.com/ryanmahan/ryanlmahan#readme",
+  "dependencies": {
+    "bulma": "^0.7.2"
+  }
+}
