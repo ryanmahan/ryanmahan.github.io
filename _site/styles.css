@@ -1,10 +1,10 @@
 html {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,612ae0+100 */
   background-size: cover;
-  background: #1e5799; /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #1e5799 0%, #612ae0 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #1e5799 0%,#612ae0 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #1e5799 0%,#612ae0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: #1575e4; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #1575e4 0%, #612ae0 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #1575e4 0%,#612ae0 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #1575e4 0%,#612ae0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#612ae0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -16,8 +16,7 @@ nav {
   margin-bottom: 3%;
 }
 
-.mebox {
-  height: 500px;
+.centerbox {
   margin: 2% 5%;
 }
 
@@ -28,10 +27,14 @@ nav {
 }
 
 .whitetext {
-  font-size: 1em;
   color: whitesmoke;
 }
 
 .mobiletext {
-  font-size: 1em;
+  font-size: 2em;
+}
+
+.mobileimage {
+  max-height: 200px;
+  max-width: 180px;
 }

@@ -1,14 +1,34 @@
 <head>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav class="navbar is-hidden-touch" role="navigation" aria-label="main navigation">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
+      <a class="navbar-item" href="/">
         <img src="../res/logo.png" width="100" height="36">
       </a>
-    </div>
+      <div id="navbar-burger-id" class="navbar-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="navbar-menu-id" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/">Home</a>
+          <a class="navbar-item" href="/programming">Programming</a>
+          <a class="navbar-item" href="/leadership">Leadership</a>
+          <a class="navbar-item" href="/contact">Leadership</a>
+        </div>
+        <div class="navbar-end">
+          <a class="navbar-item is-hidden-touch" href="#where-section"><i class="far fa-clock fa-lg"></i></a>
+        </div>
+      </div>
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
@@ -26,8 +46,9 @@
         </a>
       </div>
     </div>
+
   </nav>
-  <div class="box transparent mebox is-hidden-touch">
+  <div class="box transparent centerbox">
     <article class="media">
       <div class="media-left">
         <figure class="image">
@@ -36,12 +57,12 @@
       </div>
       <div class="media-content">
         <div class="content">
-          <h1>Hey! I'm Ryan Mahan</h1> <br>
-          <h3>I love coding, hiking, and student leadership. At UMass (Class of 2019) I'm studying Computer Science, part of the web development team for <a class="whitelink" href="http://hackumass.com">HackUMass</a>, and I run the <a class="whitelink" href="https://umass.edu/sga">Student Government Association's</a> Legislative Branch.</h3>
+          <h1 class="is-size-2">Hey! I'm Ryan Mahan</h1> <br>
+          <h3 class='is-size-4'>I love coding, hiking, and student leadership. At UMass (Class of 2019) I'm studying Computer Science, part of the web development team for <a class="whitelink" href="http://hackumass.com">HackUMass</a>, and I run the <a class="whitelink" href="https://umass.edu/sga">Student Government Association's</a> Legislative Branch.</h3>
           <br> <br>
           <div class="columns level-item">
             <div class="column">
-              <p class="whitetext level-item">
+              <p class="whitetext level-item is-size-4">
                 Check out some of my work!
               </p>
             </div>
@@ -62,13 +83,13 @@
       </div>
     </article>
   </div>
-  <div class="is-hidden-desktop has-text-centered">
-      <div class="container" style="margin: 0% 5%;">
-        <figure class="image" style="margin: 5% 10%;">
-          <img src="/res/logo.png">
-        </figure>
-        <p class="whitetext mobiletext">I love coding, hiking, and student leadership. At UMass (Class of 2019) I'm studying Computer Science, part of the web development team for <a class="whitelink" href="hackumass.com">HackUMass</a>, and I run the <a class="whitelink" href="umass.edu/sga">Student Government Association's</a> Legislative Branch.</p>
-      </div>
+  <!-- <div class="is-hidden-desktop has-text-centered">
+    <figure class="image" style="margin: 5% 10%;">
+      <img src="/res/logo.png">
+    </figure>
+    <br>
+    <div class="box mebox transparent">
+      <p class="whitetext mobiletext">I love coding, hiking, and student leadership. At UMass (Class of 2019) I'm studying Computer Science, part of the web development team for <a class="whitelink" href="hackumass.com">HackUMass</a>, and I run the <a class="whitelink" href="umass.edu/sga">Student Government Association's</a> Legislative Branch.</p>
       <br> <br>
       <div class="columns level-item">
         <div class="column">
@@ -90,5 +111,45 @@
         </div>
       </div>
     </div>
+  </div> -->
+  <div class="container has-text-centered">
+    <h1 class="whitetext is-size-2" style="margin-top: 5%;">Recent Projects</h1>
+  </div>
+  <div class="box centerbox transparent">
+      <article class="media">
+          <div class="media-left">
+            <figure class="image">
+              <img src="https://dummyimage.com/300" alt="Oops! I didnt load!">
+            </figure>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <h1 class="is-size-2">Lorem ipsum dolor sit</h1> <br>
+              <h3 class='is-size-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+          </div>
+        </article>
   </div>
 </body>
+
+<script>
+    // Close mobile & tablet menu on item click
+    $('.navbar-item').each(function(e) {
+    $(this).click(function(){
+      if($('#navbar-burger-id').hasClass('is-active')){
+        $('#navbar-burger-id').removeClass('is-active');
+        $('#navbar-menu-id').removeClass('is-active');
+      }
+    });
+  });
+
+  // Open or Close mobile & tablet menu
+  $('#navbar-burger-id').click(function () {
+    if($('#navbar-burger-id').hasClass('is-active')){
+      $('#navbar-burger-id').removeClass('is-active');
+      $('#navbar-menu-id').removeClass('is-active');
+    }else {
+      $('#navbar-burger-id').addClass('is-active');
+      $('#navbar-menu-id').addClass('is-active');
+    }
+  });
+</script>
