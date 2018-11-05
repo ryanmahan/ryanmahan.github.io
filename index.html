@@ -1,10 +1,13 @@
 <head>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  
   <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <link rel="stylehseet" type="text/css" href="feathericon-release/css/feathericon.min.css">
+
 </head>
 <body>
   <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -13,23 +16,24 @@
         <img src="../res/logo.png">
       </a>
       <div id="navbar-burger-id" class="navbar-burger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div id="navbar-menu-id" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="/">Home</a>
-          <a class="navbar-item" href="/programming">Programming</a>
-          <a class="navbar-item" href="/leadership">Leadership</a>
-          <a class="navbar-item" href="/contact">Contact</a>
-        </div>
-        <div class="navbar-end">
-          <a class="navbar-item is-hidden-touch" href="#where-section"><i class="far fa-clock fa-lg"></i></a>
-        </div>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
+    <div id="navbar-menu-id" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/">Home</a>
+        <a class="navbar-item" href="/programming">Programming</a>
+        <a class="navbar-item" href="/leadership">Leadership</a>
+        <a class="navbar-item" href="/contact">Contact</a>
+      </div>
+      <div class="navbar-end">
+          <a class="navbar-item" href="mailto:ryanmahan97@gmail.com"><i class="far fa-linkedin"></i></a>
+          <a class="navbar-item is-hidden-touch" href="#where-section"><i class="far fa-clock fa-lg"></i></a>
+        </div>
+    </div>
+    
   </nav>
   <div class="box transparent centerbox">
     <article class="media">
@@ -102,16 +106,30 @@
       <article class="media">
           <div class="media-left">
             <figure class="image">
-              <img src="https://dummyimage.com/300" alt="Oops! I didnt load!">
+              <img src="./res/hackumass.png" style="width: 150px;" alt="Oops! I didnt load!">
             </figure>
           </div>
           <div class="media-content">
             <div class="content">
-              <h1 class="is-size-2">Lorem ipsum dolor sit</h1> <br>
-              <h3 class='is-size-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+              <h1 class="is-size-2">HackUMass Dashboard</h1> <br>
+              <h3 class='is-size-4'>As a part of the HackUMass Tech Team, I worked on the ruby on rails based website we use for organizing the hackathon. This includes methods for users to apply, request for a mentor, RSVP, and check in. This project is going open source soon as SaaS and is sponsored by GitHub, check it out there soon. </h3>
           </div>
         </article>
   </div>
+  <div class="box centerbox transparent">
+    <article class="media">
+        <div class="media-left">
+          <figure class="image">
+            <img src="./res/sgacircle.png" style="width: 150px;" alt="Oops! I didnt load!">
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <a href="http://www.wtfumass.com" ><h1 class="is-size-2">WTF UMass</h1> </a> <br>
+            <h3 class='is-size-4'>What to fix (WTF) UMass is a website where student can submit feedback anonymous to their peers for their Student Government Assocation to work on. Other students can come and vote for the issues that they want to see fixed on campus, and get status updates on their presented ideas. Check it out at <a href="www.wtfumass.com">wtfumass.com</a></h3>
+        </div>
+      </article>
+</div>
 </body>
 
 <script>
