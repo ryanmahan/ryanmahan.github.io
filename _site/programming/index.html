@@ -1,33 +1,66 @@
 <head>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
   <link rel="stylesheet" type="text/css" href="../styles.css">
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav class="is-hidden-touch navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="../res/logo.png" width="100" height="36">
-      </a>
+  <head>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="../res/logo.png">
+    </a>
+    <div id="navbar-burger-id" class="navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+  </div>
+  <div id="navbar-menu-id" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/">Home</a>
+      <a class="navbar-item" href="/programming">Programming</a>
+      <a class="navbar-item" href="/leadership">Leadership</a>
+      <a class="navbar-item" href="/contact">Contact</a>
+    </div>
+    <div class="navbar-end">
+      <a class="navbar-item" href="mailto:ryanmahan97@gmail.com"><i class="far fa-linkedin"></i></a>
+      <a class="navbar-item is-hidden-touch" href="#where-section"><i class="far fa-clock fa-lg"></i></a>
+    </div>
+  </div>
+</nav>
 
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="/">
-          Home
-        </a>
-        <a class="navbar-item" href="/programming">
-          Programming
-        </a>
-        <a class="navbar-item" href="/leadership">
-          Leadership
-        </a>
-        <a class="navbar-item" href="/contact">
-          Contact
-        </a>
-      </div>
-    </div>
-  </nav>
-  <div class="hero is-fullheight transparent">
+<script>
+    // Close mobile & tablet menu on item click
+    $('.navbar-item').each(function(e) {
+    $(this).click(function(){
+      if($('#navbar-burger-id').hasClass('is-active')){
+        $('#navbar-burger-id').removeClass('is-active');
+        $('#navbar-menu-id').removeClass('is-active');
+      }
+    });
+  });
+
+  // Open or Close mobile & tablet menu
+  $('#navbar-burger-id').click(function () {
+    if($('#navbar-burger-id').hasClass('is-active')){
+      $('#navbar-burger-id').removeClass('is-active');
+      $('#navbar-menu-id').removeClass('is-active');
+    }else {
+      $('#navbar-burger-id').addClass('is-active');
+      $('#navbar-menu-id').addClass('is-active');
+    }
+  });
+</script>
+  <div class="box centerbox transparent">
     <article class="media">
       <div class="media-left">
         <figure class="image">
@@ -43,7 +76,7 @@
       </div>
     </article>
   </div>
-  <div class="hero is-fullheight is-primary transparent">
+  <div class="box centerbox transparent">
     <article class="media">
       <div class="media-left">
         <figure class="image">
@@ -59,7 +92,7 @@
       </div>
     </article>
   </div>
-  <div class="hero is-fullheight is-success">
+  <div class="box centerbox transparent">
     <article class="media">
       <div class="media-left">
         <figure class="image">
@@ -70,7 +103,7 @@
         <div class="content">
           <a href="http://www.github.com/ryanmahan/arg-psych" ><h1 class="is-size-2">ARG!</h1> </a>
           <h3>HTML, CSS, JQuery</h3>
-          <h5 class='is-size-5'>This simple reaction time game was written for researchers to be able to create a scripted environment where a subject can compete against an unknown opponent in a scripted environment. Researchers have complete control over who wins and loses and get a CSV of the actions of the player at the end of the trial. See the code <a class="link" href="https://github.com/ryanmahan/arg-psych">here</a> and play five rounds against the computer <a class="link" href="/arg-psych">here</a>. Watch out! They're pretty good.</h5>
+          <h5 class='is-size-5'>This simple reaction time game was written for researchers to be able to create a scripted environment where a subject can compete against an unknown opponent. Researchers have complete control over who wins and loses and get a CSV of the actions of the player at the end of the trial. See the code <a class="link" href="https://github.com/ryanmahan/arg-psych">here</a> and play five rounds against the computer <a class="link" href="/arg-psych">here</a>. Watch out! They're pretty good.</h5>
         </div>
       </div>
     </article>

@@ -6,28 +6,62 @@
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-    <link rel="stylehseet" type="text/css" href="feathericon-release/css/feathericon.min.css">
+  <link rel="stylehseet" type="text/css" href="feathericon-release/css/feathericon.min.css">
 </head>
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img src="../res/logo.png">
-      </a>
+  <head>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="../res/logo.png">
+    </a>
+    <div id="navbar-burger-id" class="navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div id="navbar-menu-id" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="/">Home</a>
-        <a class="navbar-item" href="/programming">Programming</a>
-        <a class="navbar-item" href="/leadership">Leadership</a>
-        <a class="navbar-item" href="/contact">Contact</a>
-      </div>
-      <div class="navbar-end">
-        <a class="navbar-item" href="mailto:ryanmahan97@gmail.com"><i class="far fa-linkedin"></i></a>
-        <a class="navbar-item is-hidden-touch" href="#where-section"><i class="far fa-clock fa-lg"></i></a>
-      </div>
+  </div>
+  <div id="navbar-menu-id" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/">Home</a>
+      <a class="navbar-item" href="/programming">Programming</a>
+      <a class="navbar-item" href="/leadership">Leadership</a>
+      <a class="navbar-item" href="/contact">Contact</a>
     </div>
-  </nav>
+    <div class="navbar-end">
+      <a class="navbar-item" href="mailto:ryanmahan97@gmail.com"><i class="far fa-linkedin"></i></a>
+      <a class="navbar-item is-hidden-touch" href="#where-section"><i class="far fa-clock fa-lg"></i></a>
+    </div>
+  </div>
+</nav>
+
+<script>
+    // Close mobile & tablet menu on item click
+    $('.navbar-item').each(function(e) {
+    $(this).click(function(){
+      if($('#navbar-burger-id').hasClass('is-active')){
+        $('#navbar-burger-id').removeClass('is-active');
+        $('#navbar-menu-id').removeClass('is-active');
+      }
+    });
+  });
+
+  // Open or Close mobile & tablet menu
+  $('#navbar-burger-id').click(function () {
+    if($('#navbar-burger-id').hasClass('is-active')){
+      $('#navbar-burger-id').removeClass('is-active');
+      $('#navbar-menu-id').removeClass('is-active');
+    }else {
+      $('#navbar-burger-id').addClass('is-active');
+      $('#navbar-menu-id').addClass('is-active');
+    }
+  });
+</script>
   <div class="box transparent centerbox">
     <article class="media">
       <div class="media-left">
@@ -63,35 +97,6 @@
       </div>
     </article>
   </div>
-  <!-- <div class="is-hidden-desktop has-text-centered">
-    <figure class="image" style="margin: 5% 10%;">
-      <img src="/res/logo.png">
-    </figure>
-    <br>
-    <div class="box mebox transparent">
-      <p class="whitetext mobiletext">I love coding, hiking, and student leadership. At UMass (Class of 2019) I'm studying Computer Science, part of the web development team for <a class="whitelink" href="hackumass.com">HackUMass</a>, and I run the <a class="whitelink" href="umass.edu/sga">Student Government Association's</a> Legislative Branch.</p>
-      <br> <br>
-      <div class="columns level-item">
-        <div class="column">
-          <p class="whitetext mobiletext level-item">
-            Check out some of my work!
-          </p>
-        </div>
-      </div>
-      <div class="columns level-item">
-        <div class="column">
-        </div>
-        <div class="column">
-          <a class="button is-light level-item" href='/programming'>Programming</a>
-        </div>
-        <div class="column">
-          <a class="button is-light level-item" href='/leadership'>Leadership</a>
-        </div>
-        <div class="column">
-        </div>
-      </div>
-    </div>
-  </div> -->
   <div class="container has-text-centered">
     <h1 class="whitetext is-size-2" style="margin-top: 5%;">Recent Projects</h1>
   </div>
@@ -126,26 +131,3 @@
     </article>
   </div>
 </body>
-
-<script>
-    // Close mobile & tablet menu on item click
-    $('.navbar-item').each(function(e) {
-    $(this).click(function(){
-      if($('#navbar-burger-id').hasClass('is-active')){
-        $('#navbar-burger-id').removeClass('is-active');
-        $('#navbar-menu-id').removeClass('is-active');
-      }
-    });
-  });
-
-  // Open or Close mobile & tablet menu
-  $('#navbar-burger-id').click(function () {
-    if($('#navbar-burger-id').hasClass('is-active')){
-      $('#navbar-burger-id').removeClass('is-active');
-      $('#navbar-menu-id').removeClass('is-active');
-    }else {
-      $('#navbar-burger-id').addClass('is-active');
-      $('#navbar-menu-id').addClass('is-active');
-    }
-  });
-</script>

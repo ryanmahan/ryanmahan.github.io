@@ -3,30 +3,59 @@
   <link rel="stylesheet" type="text/css" href="../styles.css">
 </head>
 <body>
-  <nav class="is-hidden-touch navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="../res/logo.png" width="100" height="36">
-      </a>
+  <head>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="../res/logo.png">
+    </a>
+    <div id="navbar-burger-id" class="navbar-burger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+  </div>
+  <div id="navbar-menu-id" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/">Home</a>
+      <a class="navbar-item" href="/programming">Programming</a>
+      <a class="navbar-item" href="/leadership">Leadership</a>
+      <a class="navbar-item" href="/contact">Contact</a>
+    </div>
+    <div class="navbar-end">
+      <a class="navbar-item" href="mailto:ryanmahan97@gmail.com"><i class="far fa-linkedin"></i></a>
+      <a class="navbar-item is-hidden-touch" href="#where-section"><i class="far fa-clock fa-lg"></i></a>
+    </div>
+  </div>
+</nav>
 
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="/">
-          Home
-        </a>
-        <a class="navbar-item" href="/programming">
-          Programming
-        </a>
-        <a class="navbar-item" href="/leadership">
-          Leadership
-        </a>
-        <a class="navbar-item" href="/contact">
-          Contact
-        </a>
-      </div>
-    </div>
-  </nav>
+<script>
+    // Close mobile & tablet menu on item click
+    $('.navbar-item').each(function(e) {
+    $(this).click(function(){
+      if($('#navbar-burger-id').hasClass('is-active')){
+        $('#navbar-burger-id').removeClass('is-active');
+        $('#navbar-menu-id').removeClass('is-active');
+      }
+    });
+  });
+
+  // Open or Close mobile & tablet menu
+  $('#navbar-burger-id').click(function () {
+    if($('#navbar-burger-id').hasClass('is-active')){
+      $('#navbar-burger-id').removeClass('is-active');
+      $('#navbar-menu-id').removeClass('is-active');
+    }else {
+      $('#navbar-burger-id').addClass('is-active');
+      $('#navbar-menu-id').addClass('is-active');
+    }
+  });
+</script>
   <div class="box centerbox transparent">
     <article class="media">
       <div class="media-left">
