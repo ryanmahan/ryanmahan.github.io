@@ -1,85 +1,84 @@
 ---
 title: Index
 ---
-<head>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="shortcut icon" type="image/x-icon" href="res/triangle-circle.png">
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <link rel="stylehseet" type="text/css" href="feathericon-release/css/feathericon.min.css">
-</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/res/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="res/triangle-circle.png">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylehseet" type="text/css" href="feathericon-release/css/feathericon.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>Ryan Mahan</title>
+  </head>
+
 <body>
   {% include header.html %}
-  <div class="box transparent centerbox">
-    <article class="media">
-      <div class="media-left">
-        <figure class="image">
-          <img src="/res/headshot.jpg" alt="Oops! I didnt load!">
-        </figure>
-      </div>
-      <div class="media-content">
-        <div class="content">
-          <h1 class="is-size-2">Hey! I'm Ryan Mahan</h1> <br>
-          <h3 class='is-size-4'>I love coding, hiking, and student leadership. At UMass (Class of 2019) I'm studying Computer Science, part of the web development team for <a class="whitelink" href="http://hackumass.com">HackUMass</a>, and I run the <a class="whitelink" href="https://umass.edu/sga">Student Government Association's</a> Legislative Branch.</h3>
-          <br> <br>
-          <div class="columns level-item">
-            <div class="column">
-              <p class="whitetext level-item is-size-4">
-                Check out some of my work!
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="res/headshot.jpg">
+          </div>
+          <div class="col-md-8">
+              <h1 class="display-3">Hey Im Ryan Mahan!</h1>
+              <p>I love coding, hiking, and student leadership. At UMass (Class of 2019) I'm studying Computer Science, part of the web development team for <a class="link" href="http://hackumass.com">HackUMass</a>, and I run the <a class="link" href="https://umass.edu/sga">Student Government Association's</a> Legislative Branch.</p>
+              <br>
+              <p> 
+                <a class="btn btn-primary btn-lg" href="/programming" role="button">Programming &raquo;</a>
+                <a class="btn btn-primary btn-lg" href="/leadership" role="button">Leadership &raquo;</a>
               </p>
-            </div>
-          </div>
-          <div class="columns level-item">
-            <div class="column">
-            </div>
-            <div class="column">
-              <a class="button is-light level-item" href='/programming'>Programming</a>
-            </div>
-            <div class="column">
-              <a class="button is-light level-item" href='/leadership'>Leadership</a>
-            </div>
-            <div class="column">
-            </div>
           </div>
         </div>
       </div>
-    </article>
-  </div>
-  <div class="container has-text-centered">
-    <h1 class="whitetext is-size-2" style="margin-top: 5%;">Recent Projects</h1>
-  </div>
-  <div class="box centerbox transparent">
-    <article class="media">
-      <div class="media-left">
-        <figure class="image">
-          <img src="./res/hackumass.png" style="width: 150px;" alt="Oops! I didnt load!">
-        </figure>
-      </div>
-      <div class="media-content">
-        <div class="content">
-          <h1 class="is-size-2">HackUMass Dashboard</h1> <br>
-          <h3 class='is-size-4'>As a part of the HackUMass Tech Team, I worked on the ruby on rails based website we use for organizing the hackathon. This includes methods for users to apply, request for a mentor, RSVP, and check in. This project is going open source soon as SaaS and is sponsored by GitHub, check it out there soon. </h3>
+    </div>
+    <div class="container">
+      <h2 class="whitetext">Check out some of my work!</h2>
+    </div>
+    <br>
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="whitetext col-md-4">
+          <h2>WTF UMass</h2>
+          <p>What to fix (WTF) UMass is a website written in Node, Vue, and MongoDB where student can submit feedback anonymous to their peers for their Student Government Assocation to work on. Other students can come and vote for the issues that they want to see fixed on campus, and get status updates on their presented ideas. </p>
+          <p>
+            <a class="btn btn-secondary" href="http://wtfumass.com" role="button">View the page &raquo;</a>
+            <a class="btn btn-secondary" href="http://github.com/ryanmahan/wtfumass" role="button">View the code &raquo;</a>
+          </p>
+        </div>
+        <div class="whitetext col-md-4">
+          <h2>ARG!</h2>
+          <p>This simple reaction time game was written for researchers to be able to create a scripted environment where a subject can compete against an unknown opponent. Researchers have complete control over who wins and loses and get a CSV of the actions of the player at the end of the trial.</p>
+          <p>
+            <a class="btn btn-secondary" href="/arg-psych" role="button">Play the game &raquo;</a>
+            <a class="btn btn-secondary" href="http://github.com/ryanmahan/arg-psych" role="button">View the code &raquo;</a>
+          </p>
+        </div>
+        <div class="whitetext col-md-4">
+          <h2>HackUMass Dashboard</h2>
+          <p>Originally written as a dashboard for HackUMass, Github wanted to sponsor our team to create a generalized open-source version for general use. With an easy set up, a group can use our dashboard that organizes mentors, attendees, events, prizes, and much more. We're currently writing better documentation, abstracting a lot of the hardcoded branding, and making set up easy as filling in a page of variables.</p>
+          <p>
+            <a class="btn btn-secondary" href="http://hackumass.com" role="button">View the page &raquo;</a>
+            <a class="btn btn-secondary disabled" href="" role="button">Open Source soon! &raquo;</a>
+          </p>
         </div>
       </div>
-    </article>
-  </div>
-  <div class="box centerbox transparent">
-    <article class="media">
-      <div class="media-left">
-        <figure class="image">
-          <img src="./res/sgacircle.png" style="width: 150px;" alt="Oops! I didnt load!">
-        </figure>
-      </div>
-      <div class="media-content">
-        <div class="content">
-          <a href="http://www.wtfumass.com" ><h1 class="is-size-2">WTF UMass</h1> </a> <br>
-          <h3 class='is-size-4'>What to fix (WTF) UMass is a website written in Node, Vue, and MongoDB where student can submit feedback anonymous to their peers for their Student Government Assocation to work on. Other students can come and vote for the issues that they want to see fixed on campus, and get status updates on their presented ideas. Check it out at <a class="link" href="www.wtfumass.com">wtfumass.com</a></h3>
-        </div>
-      </div>
-    </article>
-  </div>
-  {% include footer.html %}
+      <hr>
+    </div> 
+  </main>
+
+{% include footer.html %}
 </body>

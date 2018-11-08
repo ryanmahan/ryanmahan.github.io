@@ -1,55 +1,22 @@
-<head>
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-</head>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">
-      <img src="../res/logo.png">
-    </a>
-    <div id="navbar-burger-id" class="navbar-burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-  <div id="navbar-menu-id" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item" href="/">Home</a>
-      <a class="navbar-item" href="/programming">Programming</a>
-      <a class="navbar-item" href="/leadership">Leadership</a>
-      <a class="navbar-item" href="/contact">Contact</a>
-    </div>
-    <div class="navbar-end">
-      <div class="navbar-item">Contact Me: </div>
-      <a class="navbar-item is-hidden-touch" href="mailto:ryanmahan97@gmail.com"><i class="fas fa-envelope fa-lg"></i></a>
-      <a class="navbar-item is-hidden-touch" href="https://www.linkedin.com/in/ryan-mahan/"><i class="fab fa-linkedin fa-lg"></i></a>
-    </div>
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="res/logo.png" width="90px" height="30px">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/programming">Programming</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/leadership">Leadership</a>
+      </li>
+    </ul>
   </div>
 </nav>
-
-<script>
-    // Close mobile & tablet menu on item click
-    $('.navbar-item').each(function(e) {
-    $(this).click(function(){
-      if($('#navbar-burger-id').hasClass('is-active')){
-        $('#navbar-burger-id').removeClass('is-active');
-        $('#navbar-menu-id').removeClass('is-active');
-      }
-    });
-  });
-
-  // Open or Close mobile & tablet menu
-  $('#navbar-burger-id').click(function () {
-    if($('#navbar-burger-id').hasClass('is-active')){
-      $('#navbar-burger-id').removeClass('is-active');
-      $('#navbar-menu-id').removeClass('is-active');
-    }else {
-      $('#navbar-burger-id').addClass('is-active');
-      $('#navbar-menu-id').addClass('is-active');
-    }
-  });
-</script>

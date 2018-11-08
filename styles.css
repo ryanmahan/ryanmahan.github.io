@@ -1,4 +1,4 @@
-html {
+body {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,612ae0+100 */
   background-size: cover;
   background: #1575e4; /* Old browsers */
@@ -8,13 +8,19 @@ html {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#612ae0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-.transparent {
-  background-color: rgba(255, 255, 255, .35)
+.navbar-brand {
+    position: relative;
+    background: url(../images/logo.png);
+    width: 170px;
+    left: 15px;
+    max-height: 70px; /* height of the navbar */
 }
 
-nav {
-  margin-bottom: 3%;
-  padding-bottom: .5em;
+.footer {
+  background-color: #f5f5f5;
+}
+.transparent {
+  background-color: rgba(255, 255, 255, .35)
 }
 
 .centerbox {
@@ -31,6 +37,10 @@ nav {
   color: whitesmoke;
 }
 
+.blacktext {
+  color: black;
+}
+
 .mobiletext {
   font-size: 2em;
 }
@@ -41,6 +51,6 @@ nav {
 }
 
 .link {
-  color: whitesmoke;
+  /* color: whitesmoke; */
   text-decoration: underline;
 }
