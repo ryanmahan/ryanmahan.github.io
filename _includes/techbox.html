@@ -1,16 +1,21 @@
-<div class="box centerbox transparent">
-  <article class="media">
-    <div class="media-left">
-      <figure class="image">
-        <img src="{{ include.var.image }}" style="width: 150px;" alt="Oops! I didnt load!">
-      </figure>
-    </div>
-    <div class="media-content">
-      <div class="content">
-        <a href={{ include.var.link }} ><h1 class="is-size-2">{{ include.var.name }}</h1> </a>
-        <h3>{{ include.var.tech }}</h3>
-        <h5 class='is-size-5'>{{include.var.text}}</h5>
+<div class="container pt-5">
+  <div class="card">
+    <div class="row justify-content-start">
+      <div class="col-2 ml-2 mt-2">
+        <img class="techimg" src="{{ include.var.image }}" alt="Card image cap">
+      </div>
+      <div class="col-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ include.var.name }}</h5>
+          <h6 class="card-subtitle">{{ include.var.tech }}</h6>
+          <p>{{ include.var.text }}</p>
+          <p class="card-text">
+            <a class="btn btn-secondary" href="{{ include.var.link }}" role="button">View the page &raquo;</a>
+            <a class="btn btn-secondary" href="{{ include.var.code }}" role="button">View the code &raquo;</a>
+          </p>
+        </div>
       </div>
     </div>
-  </article>
+  </div>
 </div>
+
