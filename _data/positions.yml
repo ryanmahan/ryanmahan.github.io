@@ -1,0 +1,15 @@
+- sga:
+  name: UMass Student Government Association
+  position: Speaker
+  text: I run the Legislative Branch of the UMass Student Government Association. I spend a lot of time explaining and translating complex university structures and empowering the Senators of the Legislative branch to pursue their own changes and projects on the campus. I've been in this position for two years, and maintain regular meetings with UMass Administrators and serve as a primary point of contact for the student voice.
+  image: ../res/sgacircle.png
+- cics:
+  name: UMass College of Computer Science
+  position: Recruitment and Outreach Committee
+  text: I serve as a member on the UMass Amherst College of Information and Computer Science's Outreach and Recruitment Committee! This means that I speak at first year college events, give tours to prospective students, and assist in the college's outreach efforts to get students to come to UMass.
+  image: ../res/cics.jpg
+- localpoli:
+  name: Committee To Elect Tristan Laliberte
+  position: Chair
+  text: I helped a friend of mine get elected as a selectman in their home town, serving as Communications Director one year and Chair the next. I built a java applet to organize phonebankers, and built an algorithm to sort houses by distance to eachother in order to reduce the amount of time doorknockers would need to spend going from house to house.
+  image: ../res/tristan.jpg

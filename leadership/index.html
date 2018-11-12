@@ -2,55 +2,25 @@
 title: Leadership
 ---
 <head>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="../res/triangle-circle.png">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylehseet" type="text/css" href="feathericon-release/css/feathericon.min.css">
   <link rel="stylesheet" type="text/css" href="../styles.css">
+  <title>Ryan Mahan</title>
 </head>
-<body>
+<body class="gradient">
+  <br>
   {% include header.html %}
-  <div class="box centerbox transparent">
-    <article class="media">
-      <div class="media-left">
-        <figure class="image">
-          <img src="../res/sgacircle.png" style="width: 150px;" alt="Oops! I didnt load!">
-        </figure>
-      </div>
-      <div class="media-content">
-        <div class="content">
-         <h1 class="is-size-2">UMass Student Government Association</h1>
-          <h5 class='is-size-5'>I run the Legislative Branch of the UMass Student Government Association. I spend a lot of time explaining and translating complex university structures and empowering the Senators of the Legislative branch to pursue their own changes and projects on the campus. I've been in this position for two years, and maintain regular meetings with UMass Administrators and serve as a primary point of contact for the student voice.</h5>
-        </div>
-      </div>
-    </article>
-  </div>
-  <div class="box centerbox transparent">
-    <article class="media">
-      <div class="media-left">
-        <figure class="image">
-          <img src="../res/cics.jpg" style="width: 150px;" alt="Oops! I didnt load!">
-        </figure>
-      </div>
-      <div class="media-content">
-        <div class="content">
-         <h1 class="is-size-2">UMass CICS Outreach Committee</h1>
-          <h5 class='is-size-5'>I serve as a member on the UMass Amherst College of Information and Computer Science's Outreach and Recruitment Committee! This means that I speak at first year college events, give tours to prospective students, and assist in the college's outreach efforts to get students to come to UMass.</h5>
-        </div>
-      </div>
-    </article>
-  </div>
-  <div class="box centerbox transparent">
-    <article class="media">
-      <div class="media-left">
-        <figure class="image">
-          <img src="../res/tristan.jpg" style="width: 150px;" alt="Oops! I didnt load!">
-        </figure>
-      </div>
-      <div class="media-content">
-        <div class="content">
-         <h1 class="is-size-2">Committee To Elect Tristan Laliberte</h1>
-          <h5 class='is-size-5'>I helped a friend of mine get elected as a selectman in their home town, serving as Communications Director one year and Chair the next. I built a java applet to organize phonebankers, and built an algorithm to sort houses by distance to eachother in order to reduce the amount of time doorknockers would need to spend going from house to house.</h5>
-        </div>
-      </div>
-    </article>
-  </div>
-  
+  {% for pos in site.data.positions %}
+    {% include leadershipbox.html var=pos %}
+  {% endfor %}
+  {% include footer.html %}
 </body>
