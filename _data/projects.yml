@@ -7,17 +7,24 @@
 - wtfumass:
   name: WTF UMass
   link: http://wtfumass.com
-  code: http://ryanmahan.github.com/wtfumass
+  code: http://github.com/ryanmahan/wtfumass
   image: ../res/sgacircle.png
   tech: Node.js, Vue.js, MongoDB
   text: What to fix (WTF) UMass is a website written in Node, Vue, and MongoDB where student can submit feedback anonymous to their peers for their Student Government Assocation to work on. Other students can come and vote for the issues that they want to see fixed on campus, and get status updates on their presented ideas. Check it out at <a class="link" href="http://www.wtfumass.com">wtfumass.com</a>
 - arg:
   name: ARG!
   link: http://ryanlmahan.com/arg/
-  code: http://ryanmahan.github.com/arg-psych
+  code: http://github.com/ryanmahan/arg-psych
   image: ../res/token.png
   tech: HTML, CSS, JQuery
   text: This simple reaction time game was written for researchers to be able to create a scripted environment where a subject can compete against an unknown opponent. Researchers have complete control over who wins and loses and get a CSV of the actions of the player at the end of the trial. See the code <a class="link" href="https://github.com/ryanmahan/arg-psych">here</a> and play five rounds against the computer <a class="link" href="/arg-psych">here</a>. Watch out! They're pretty good.
+- vlsm:
+  name: VLSM Calculator
+  link: http://ryanlmahan.com/vlsm/
+  code: http://github.com/ryanmahan/vlsm-calculator
+  image: /res/vlsm.jpg
+  tech: HTML, CSS, JQuery
+  text: Inspired by the Finite State Machine Designer at <a href="http://madebyeric.com/fsm">madebyeric.com</a>, I made a subnet designer that can calculate out IP addresses using VLSM and display the info. This was made as a class project for CS 453 at UMass.
 - website:
   name: This website!
   link: http://ryanmahan.github.io
