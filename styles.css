@@ -42,3 +42,8 @@ html {
 body {
   margin-bottom: 3%;
 }
+
+.link-group {
+  position: absolute;
+  bottom: 0;
+}

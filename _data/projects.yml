@@ -1,3 +1,10 @@
+- css:
+  name: CSS Presentation
+  link: http://ryanlmahan.com/css-presentation
+  code: http://github.com/ryanmahan/css-presentation
+  image: ../res/hackumass.jpg
+  tech: HTML/CSS/Jekyll
+  text: A introductory CSS presentation I gave to "The DOJO," a web-development focused section of UnitedHealth Group to further cement their CSS foundation and to show how the advantages of SCSS fits into the common React. Built in HTML/CSS and served using Jekyll, the presentation itself is a resource for developers to see how SCSS/CSS can effect the styling of their webpage.
 - hackumass:
   name: Hackathon Dashboard
   link: http://hackumass.com
