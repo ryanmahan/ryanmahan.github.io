@@ -1,3 +1,8 @@
+- optum:
+  name: Optum
+  position: Technology Development Associate 
+  text: I am a part of "the Dojo" at Optum, a section of the Employer and Individual healthcare lines of business focused on reducing costs through modern progressive web app development that replaces older software solutions and builds new cost-saving solutions. Prirmarily using a React, Springboot, and MongoDB tech stack. I am a full-stack developer and scrum master for my team.
+  image: ../res/optum.png
 - sga:
   name: UMass Student Government Association
   position: Speaker
