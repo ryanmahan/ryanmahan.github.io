@@ -43,7 +43,13 @@ body {
   margin-bottom: 3%;
 }
 
-.link-group {
-  position: absolute;
-  bottom: 0;
+.flex-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.flex-item {
+  flex: 1 1 auto;
+
 }
