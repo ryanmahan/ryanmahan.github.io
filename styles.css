@@ -49,7 +49,10 @@ body {
   justify-content: space-between;
 }
 
-.flex-item {
+.flex-link {
   flex: 1 1 auto;
+}
 
+.flex-link:not(:first-child) {
+  margin-left: 2%;
 }
