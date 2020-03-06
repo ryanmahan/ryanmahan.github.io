@@ -30,7 +30,7 @@ watchLastRound('final', 'semi');
 
 const downloadImage = () => {
   let node = document.getElementById('bracket');
-  domtoimage.toBlob(node)
+  domtoimage.toBlob(node, { bgcolor: "white" })
     .then((blob) => {
       let url = URL.createObjectURL(blob);
       let a = document.createElement('a');
