@@ -1,0 +1,33 @@
+.techcard {
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  margin: 5% 5%;
+
+  &[backwards=true] {
+    direction: rtl;
+    > * { direction: ltr }
+  }
+
+  &__wrapper {
+    height: 100%;
+    background-color:#6699ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    img {
+      max-width: 90%;
+      height: auto;
+      width: auto\9; /* ie8 */
+    }
+  }
+
+  &__text {
+    background-color: #ffffff;
+    color: #1a2a3a;
+    margin: 5% 0px;
+  }
+}
