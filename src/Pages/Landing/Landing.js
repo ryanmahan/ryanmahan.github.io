@@ -4,7 +4,7 @@ import Rule from "../../Components/Rule";
 import background from "./background.png";
 import headshot from "./headshot.jpg";
 import Skills from './Skills';
-import Projects from './Projects';
+import Projects from './Projects/Projects';
 
 const Splash = styled.div`
   background-image: url(${background});

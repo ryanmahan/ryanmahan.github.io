@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import { FaGithub, FaReact, FaNodeJs, FaNpm } from 'react-icons/fa';
 import { DiMongodb } from 'react-icons/di';
 import { IoLogoJavascript } from 'react-icons/io'
-import StyledRule from '../../Components/Rule'
+import StyledRule from '../../../Components/Rule'
+import ProjectLinks from './ProjectLinks';
 
 
 const enableRedshift = () => redshift(.8);
@@ -78,6 +79,7 @@ export default () => (
           <StyledRule/>
           <p>{project.description}</p>
           <p>{project.actions}</p>
+          <ProjectLinks links={project.links}/>
         </Project>
         
 
