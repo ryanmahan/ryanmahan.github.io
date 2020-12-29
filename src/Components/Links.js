@@ -13,12 +13,14 @@ const slideDown = keyframes`
 
 const LinkDropdown = styled.div`
     border-radius: 0px 0px 10px 10px;
-    background: white;
+    border: 1px solid #333;
+    border-top: 0;
+    background: inherit;
     color: #333;
     overflow: hidden;
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0px;
     visibility: hidden;
     width: 100%;
     max-height: 0%;
@@ -32,8 +34,8 @@ const LinkDropdown = styled.div`
 const LinkButton = styled.button`
     border-radius: 5px;
     color: #333;
-    background: white;
-    border: none;
+    background: transparent;
+    border: 1px solid #333;
     position: relative;
     padding: 5px 20px;
 
@@ -43,10 +45,10 @@ const LinkButton = styled.button`
             max-height: 500px;
             visibility: visible;
         }
+        border-bottom: 0;
     }
 
     &:active, &:focus {
-        border: none;
         outline: none;
         border-radius: 5px 5px 0px 0px;
     }
@@ -58,15 +60,38 @@ const LinkButtonText = styled.span`
     align-items: center;
 `
 
-export default ({ links }) => {
-    return (
-        <LinkButton>
-            <LinkButtonText>Links <FaCaretDown/></LinkButtonText>
-            <LinkDropdown>
-                {links.map(link => (
-                    <a target="_blank" href={link.url}>{link.icon} {link.title}</a>
-                ))}
-            </LinkDropdown>
-        </LinkButton>
-    )
-}
+// export default ({ links }) => {
+//     return (
+//         <LinkButton>
+//             <LinkButtonText>Links <FaCaretDown/></LinkButtonText>
+//             <LinkDropdown>
+//                 {links.map(link => (
+//                     <p><a target="_blank" href={link.url}>{link.icon} {link.title}</a></p>
+//                 ))}
+//             </LinkDropdown>
+//         </LinkButton>
+//     )
+// }
+
+const LinkGroup = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+`
+
+const Link = styled.a`
+    width: 30px;
+    font-size: 1.5em;
+    color: #333;
+    &:link {
+        color: white;
+    }
+`
+
+export default ({ links }) => (
+    <LinkGroup>
+        {links.map(link => 
+            <Link href={link.url} target="_blank">{link.icon}</Link>
+        )}
+    </LinkGroup>
+)
