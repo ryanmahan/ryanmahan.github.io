@@ -35,10 +35,10 @@ const Splash = styled.div`
 
 const AboutMe = styled.div`
   display: flex;
-  margin-top: 15%;
+  margin-top: 5%;
   margin-left: 2%;
   margin-right: 2%;
-  
+
   img {
     width: 45vw;
     height: auto;
@@ -77,12 +77,12 @@ const Landing = (props) => {
         <img src={headshot}/>
         <div>
           <h1>Hey, I'm Ryan. <br/> I write code.</h1>
-          <Rule/>
+          <Rule width="100%"/>
           <h3>
             I work as a Software Engineer and Scrum Master at Optum.
             In my free time, I'm learning data science by competing in kaggle competitions, use my 3D printer, and build PCs.
             I like to listen to NPR podcasts like Planet Money, Throughline, and How I Built This. I've got two adorable dogs who are the stars of all my video calls.
-            Understanding, positivity, and constant growth are my tenants.
+            I strive for constant growth and adaptation.
           </h3>
         </div>
       </AboutMe>
