@@ -1,7 +1,0 @@
-
-[submodule "vlsm"]
-	path = vlsm
-	url = https://github.com/ryanmahan/vlsm-calculator
-[submodule "arg"]
-	path = arg
-	url = https://github.com/ryanmahan/arg-psych
