@@ -94,7 +94,7 @@ const Landing = (props) => {
       <Rule/>
       <p style={{margin: "0px 10%"}}>Thanks for scrolling so far! Use the links below to send me an email, view my linkedin, or my github page.</p>
       <LinkGroup>
-        <Link href="mailto:ryanmahan97@gmail.com"><FaEnvelope/></Link>
+        <Link href="mailto:ryanmahan97+website@gmail.com"><FaEnvelope/></Link>
         <Link href="https://linkedin.com/in/ryan-mahan"><FaLinkedin/></Link>
         <Link href="https://github.com/ryanmahan"><FaGithub/></Link>
       </LinkGroup>
