@@ -20,7 +20,10 @@ jobs:
         with:
           hugo-version: 'latest'
           extended: true
-
+          
+      - name: Insatll deps
+        run: npm i -g postcss postcss-cli autoprefixer
+        
       - name: Build
         run: hugo --minify
 
