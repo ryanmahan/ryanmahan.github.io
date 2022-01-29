@@ -1,4 +1,4 @@
-baseURL                          = "http://ryanlmahan.com/"   # Your domain name. Must end with "/"
+baseURL                          = "https://ryanlmahan.com/"   # Your domain name. Must end with "/"
 theme                            = "introduction"
 DefaultContentLanguage           = "en"                    # Default language for multilingual sites
 # disqusshortname                 = ""                     # https://gohugo.io/content-management/comments
