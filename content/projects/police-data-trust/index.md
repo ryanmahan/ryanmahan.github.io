@@ -3,10 +3,10 @@ title: "Police Data Trust" # Title of your project
 date: 2022-02-08T21:10:02-05:00
 weight: 10 # Order in which to show this project on the home page
 resources:
-    - src: plant.jpg
+    - src: NPDCLogo.png
       params:
           weight: -100 # Optional weighting for a specific image in this project folder
-draft: true
+draft: false
 ---
 {{% center %}} 
 [Github](https://github.com/codeforboston/police-data-trust)

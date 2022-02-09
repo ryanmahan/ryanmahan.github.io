@@ -1,7 +1,7 @@
 ---
-title: "Developing Reusable React" # Title of your project
+title: "Developing Reusable React Libraries" # Title of your project
 date: 20210207
-weight: 0 # Order in which to show this project on the home page
+weight: 100 # Order in which to show this project on the home page
 external_link: "" # Optional external link instead of modal
 draft: false
 ---

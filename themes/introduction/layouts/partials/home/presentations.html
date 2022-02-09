@@ -17,7 +17,7 @@
                   {{ $width = "490x" }}
                 {{ end}}
                 <div class="column {{ $columWidth }}">
-                    <div class="card" data-target="#project-{{ $index }}">
+                    <div class="card" data-target="#presentation-{{ $index }}">
                         {{ if .Resources.ByType "image" }}
                         <div class="card-image">
                             <figure class="image is-3by2">
@@ -55,7 +55,7 @@
     <!-- Projects modals -->
     {{ range $index, $element := .Pages.ByWeight | first $numberOfProjectsToShow }}
     {{ if not .Params.external_link }}
-    <div class="modal" id="project-{{ $index }}">
+    <div class="modal" id="presentation-{{ $index }}">
         <div class="modal-background"></div>
         <div class="modal-card">
             {{ with .Title }}
@@ -89,7 +89,7 @@
                 {{ .Content }}
             </section>
         </div>
-        <button class="modal-close is-large" aria-label="close" data-target="#project-{{ $index }}"></button>
+        <button class="modal-close is-large" aria-label="close" data-target="#presentation-{{ $index }}"></button>
     </div>
     {{ end }}
     {{ end }}
