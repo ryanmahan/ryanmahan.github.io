@@ -1,0 +1,8 @@
+---
+title: "Developing Reusable React" # Title of your project
+date: 20210207
+weight: 0 # Order in which to show this project on the home page
+external_link: "" # Optional external link instead of modal
+draft: false
+---
+Given to my department in coordination with a larger push for developing reusable resources, this presentation fills a knowledge gap of setting up, developing, and publishing NPM packages designed for react applications. A combination of NPM package mechanics and design paradigms for creating maintainable and highly configurable libraries, this presentation helped migrate my department increase code reusability. Alongside this presenation, I developed an internal react hooks library. I also provided a template repository that would enable other developers to start on their library ideas without having to learn the intracacies of setting up build tools and an example app for testing their package.
