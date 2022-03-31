@@ -54,12 +54,19 @@
             {{ $pages = $pages | append . }}
         {{ end }}
 
+        {{ with .Site.GetPage "/presentations" }}
+            {{ $pages = $pages | append . }}
+        {{ end }}
+
         {{ range sort $pages "Params.weight" }}
         {{ if ne .Name "contact.md" }}
         {{ if .File }}
         {{ if eq (os.Stat .File.Dir).Name "projects" }}
             <!-- Now for some cool projects -->
             {{ partial "home/projects.html" . }}
+        {{ else if eq (os.Stat .File.Dir).Name "presentations" }}
+            <!-- Now for some cool projects -->
+            {{ partial "home/presentations.html" . }}
         {{ else if eq (os.Stat .File.Dir).Name "blog" }}
             <!-- Let`s show some blog posts -->
             {{ partial "home/blog.html" . }}
