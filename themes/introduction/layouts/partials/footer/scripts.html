@@ -3,7 +3,15 @@
 {{ $scripts := slice $jQuery $index | resources.Concat "js/bundle.js" | fingerprint }}
 <script src="{{ $scripts.Permalink }}" integrity="{{ $scripts.Data.Integrity }}"></script>
 
-{{ template "_internal/google_analytics.html" . }}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KNZB2ZFE3S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KNZB2ZFE3S');
+</script>
 
 <!-- Custom JavaScript -->
 {{ range .Site.Params.customJS -}}
