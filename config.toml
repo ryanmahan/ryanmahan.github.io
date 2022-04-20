@@ -33,7 +33,7 @@ googleAnalytics                 = "G-KNZB2ZFE3S"                     # https://g
     [params.share]
         twitter                  = true
         facebook                 = true
-        pinterest                = true
+        pinterest                = false
 
     # To enable giscus, the GitHub-discussions-based comment section,
     # input the repository for the discussions below. For more details, see
@@ -83,7 +83,7 @@ googleAnalytics                 = "G-KNZB2ZFE3S"                     # https://g
 #     url     = "/"
 #     weight  = 0
 # [[menu.main]]
-#     name    = "Blog"
+#     name    = "Ryan's Blog"
 #     url     = "/blog/"
 #     weight  = 1
 
