@@ -1,5 +1,5 @@
 ---
-title: "How does React Concurrency improve performance?"
+title: "How does React v18's concurrency improve performance?"
 date: 2022-04-04T18:27:37-04:00
 draft: false
 tags: ["react"]
