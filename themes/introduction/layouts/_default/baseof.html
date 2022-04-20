@@ -10,6 +10,8 @@
         {{ end }}
         <!-- Include page specific css -->
         {{ block "customCSS" . }}
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose'}});</script>
         {{ end }}
     </head>
     <body>
