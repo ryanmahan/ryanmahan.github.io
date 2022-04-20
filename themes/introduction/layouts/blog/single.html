@@ -34,6 +34,11 @@
             <span class="hidden">Pinterest</span>
         </a>
         {{ end }}
+        <!-- TODO: Add conditional rendering based on config -->
+        <a class="icon-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}">
+            <i class="fab fa-linkedin"></i>
+            <span class="hidden">LinkedIn</span>
+        </a>
     </div>
     {{ end }}
     {{ range $taxonomy_term, $taxonomy := .Params }}
