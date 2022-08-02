@@ -259,7 +259,7 @@ a {
 
 code {
   background-color: transparent;
-  color: #7371FC;
+  color: #6667AB;
   font-size: 0.875em;
   font-weight: normal;
   padding: 0.25em 0.5em 0.25em; }
@@ -355,31 +355,31 @@ a.has-text-dark:hover, a.has-text-dark:focus {
   background-color: #363636 !important; }
 
 .has-text-primary {
-  color: #7371FC !important; }
+  color: #6667AB !important; }
 
 a.has-text-primary:hover, a.has-text-primary:focus {
-  color: #423ffb !important; }
+  color: #4f508f !important; }
 
 .has-background-primary {
-  background-color: #7371FC !important; }
+  background-color: #6667AB !important; }
 
 .has-text-primary-light {
-  color: #ebebff !important; }
+  color: #f2f2f8 !important; }
 
 a.has-text-primary-light:hover, a.has-text-primary-light:focus {
-  color: #bab9fe !important; }
+  color: #d1d1e6 !important; }
 
 .has-background-primary-light {
-  background-color: #ebebff !important; }
+  background-color: #f2f2f8 !important; }
 
 .has-text-primary-dark {
-  color: #0704d2 !important; }
+  color: #535497 !important; }
 
 a.has-text-primary-dark:hover, a.has-text-primary-dark:focus {
-  color: #130ffa !important; }
+  color: #6e6faf !important; }
 
 .has-background-primary-dark {
-  background-color: #0704d2 !important; }
+  background-color: #535497 !important; }
 
 .has-text-link {
   color: #3273dc !important; }
@@ -1977,7 +1977,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
         background-color: #363636;
         color: #fff; } }
   .navbar.is-primary {
-    background-color: #7371FC;
+    background-color: #6667AB;
     color: #fff; }
     .navbar.is-primary .navbar-brand > .navbar-item,
     .navbar.is-primary .navbar-brand .navbar-link {
@@ -1986,7 +1986,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     .navbar.is-primary .navbar-brand .navbar-link:focus,
     .navbar.is-primary .navbar-brand .navbar-link:hover,
     .navbar.is-primary .navbar-brand .navbar-link.is-active {
-      background-color: #5a58fb;
+      background-color: #5859a0;
       color: #fff; }
     .navbar.is-primary .navbar-brand .navbar-link::after {
       border-color: #fff; }
@@ -2008,7 +2008,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
       .navbar.is-primary .navbar-end .navbar-link:focus,
       .navbar.is-primary .navbar-end .navbar-link:hover,
       .navbar.is-primary .navbar-end .navbar-link.is-active {
-        background-color: #5a58fb;
+        background-color: #5859a0;
         color: #fff; }
       .navbar.is-primary .navbar-start .navbar-link::after,
       .navbar.is-primary .navbar-end .navbar-link::after {
@@ -2016,10 +2016,10 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
       .navbar.is-primary .navbar-item.has-dropdown:focus .navbar-link,
       .navbar.is-primary .navbar-item.has-dropdown:hover .navbar-link,
       .navbar.is-primary .navbar-item.has-dropdown.is-active .navbar-link {
-        background-color: #5a58fb;
+        background-color: #5859a0;
         color: #fff; }
       .navbar.is-primary .navbar-dropdown a.navbar-item.is-active {
-        background-color: #7371FC;
+        background-color: #6667AB;
         color: #fff; } }
   .navbar.is-link {
     background-color: #3273dc;
@@ -3884,7 +3884,7 @@ a.navbar-item,
         .hero.is-dark.is-bold .navbar-menu {
           background-image: linear-gradient(141deg, #1f191a 0%, #363636 71%, #46403f 100%); } }
   .hero.is-primary {
-    background-color: #7371FC;
+    background-color: #6667AB;
     color: #fff; }
     .hero.is-primary a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
     .hero.is-primary strong {
@@ -3898,14 +3898,14 @@ a.navbar-item,
         color: #fff; }
     @media screen and (max-width: 1023px) {
       .hero.is-primary .navbar-menu {
-        background-color: #7371FC; } }
+        background-color: #6667AB; } }
     .hero.is-primary .navbar-item,
     .hero.is-primary .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
     .hero.is-primary a.navbar-item:hover, .hero.is-primary a.navbar-item.is-active,
     .hero.is-primary .navbar-link:hover,
     .hero.is-primary .navbar-link.is-active {
-      background-color: #5a58fb;
+      background-color: #5859a0;
       color: #fff; }
     .hero.is-primary .tabs a {
       color: #fff;
@@ -3921,12 +3921,12 @@ a.navbar-item,
     .hero.is-primary .tabs.is-boxed li.is-active a, .hero.is-primary .tabs.is-boxed li.is-active a:hover, .hero.is-primary .tabs.is-toggle li.is-active a, .hero.is-primary .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
-      color: #7371FC; }
+      color: #6667AB; }
     .hero.is-primary.is-bold {
-      background-image: linear-gradient(141deg, #3b59ff 0%, #7371FC 71%, #9d88ff 100%); }
+      background-image: linear-gradient(141deg, #44539a 0%, #6667AB 71%, #7c71b9 100%); }
       @media screen and (max-width: 768px) {
         .hero.is-primary.is-bold .navbar-menu {
-          background-image: linear-gradient(141deg, #3b59ff 0%, #7371FC 71%, #9d88ff 100%); } }
+          background-image: linear-gradient(141deg, #44539a 0%, #6667AB 71%, #7c71b9 100%); } }
   .hero.is-link {
     background-color: #3273dc;
     color: #fff; }
@@ -8842,12 +8842,18 @@ html.modal-open {
     animation-delay: 1.8s; }
 
 a {
-  color: #7371FC; }
+  color: #6667AB; }
   a:hover {
     color: #000000;
     font-style: none; }
   a:active {
-    color: #7371FC; }
+    color: #6667AB; }
+
+p a {
+  text-decoration: underline; }
+
+pre {
+  background: #eaeaea !important; }
 
 h1, h2, .title, .subtitle {
   color: #222222; }
@@ -8960,7 +8966,7 @@ details[open] summary {
 
 .navbar-burger {
   margin-right: auto;
-  color: #7371FC; }
+  color: #6667AB; }
 
 .navbar-burger:hover {
   background-color: #ffffff; }
@@ -9123,7 +9129,10 @@ details[open] summary {
   background-color: #f7f7f7; }
 
 .markdown code, .markdown pre {
-  border-radius: 3px; }
+  border-radius: 10px; }
+
+.markdown pre {
+  margin-bottom: 1em; }
 
 .markdown img {
   display: block;
@@ -9135,5 +9144,8 @@ details[open] summary {
 
 .modal-close {
   background-color: #000000; }
+
+code {
+  background: #EEEDEA; }
 
 /*# sourceMappingURL=main.css.map */

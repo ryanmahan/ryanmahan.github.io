@@ -33,6 +33,13 @@ a
     &:active
         color: $primary
 
+p
+    a
+        text-decoration: underline
+
+pre
+    background: #eaeaea !important
+
 h1, h2, .title, .subtitle
     color: $h-color
 
@@ -286,7 +293,9 @@ details[open] summary
     tbody tr:nth-child(even) th
         background-color: #f7f7f7
     code, pre
-        border-radius: 3px
+        border-radius: 10px
+    pre
+        margin-bottom: 1em
     img
         display: block
         margin: 2rem auto
