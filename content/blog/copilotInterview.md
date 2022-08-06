@@ -4,6 +4,8 @@ date: 2022-08-01T17:43:00-04:00
 draft: false
 ---
 
+![Copilot interviewing for a job (credit: undraw.co)](/img/copilot-interview.png)
+
 [Github Copilot](https://github.com/features/Copilot) is a natural language model built on [OpenAI Codex](https://openai.com/blog/openai-codex/) that suggests code snippets based on existing comments and code. With Copilot, programmers write descriptive comments and function names and Copilot writes the rest. This is hilariously similar to the usual coding interview, which consists of a prompt and a template for a human to fill in with code. What if we replaced the human interviewee with Copilot? Would it generate good enough code to get a job?
 
 Copilot has an advantage going into these challenges that it might not have elsewhere. I'm using [leetcode's most popular problems](https://leetcode.com/problemset/all/?sorting=W3sic29ydE9yZGVyIjoiREVTQ0VORElORyIsIm9yZGVyQnkiOiJGUkVRVUVOQ1kifV0%3D) as a testing base, and solutions to these questions are represented well on Github and therefore are likely in Copilot's training data verbatim. This was evident in testing, Copilot would sometimes suggest the URL to a question after I wrote a paraphrased version of the prompt. Even with this advantage I'd consider these results valid, as companies will sometimes ask these questions verbatim and interviewees recognize them as well. I implemented a few measures to avoid directly matching a questions prompt, by paraphrasing and avoiding using the exact problem title or function name.
