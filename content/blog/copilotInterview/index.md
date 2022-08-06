@@ -1,6 +1,6 @@
 ---
 title: "Can Copilot pass a coding interview?"
-date: 2022-08-01T17:43:00-04:00
+date: 2022-08-07T19:00:00-04:00
 draft: false
 image: copilot-interview.png
 ---
