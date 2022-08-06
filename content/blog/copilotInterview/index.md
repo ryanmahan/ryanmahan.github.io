@@ -2,9 +2,11 @@
 title: "Can Copilot pass a coding interview?"
 date: 2022-08-01T17:43:00-04:00
 draft: false
+image: copilot-interview.png
 ---
+<meta property="og:image" content="copilot-interview.png" />
 
-![Copilot interviewing for a job (credit: undraw.co)](/img/copilot-interview.png)
+![Copilot interviewing for a job (credit: undraw.co)](copilot-interview.png)
 
 [Github Copilot](https://github.com/features/Copilot) is a natural language model built on [OpenAI Codex](https://openai.com/blog/openai-codex/) that suggests code snippets based on existing comments and code. With Copilot, programmers write descriptive comments and function names and Copilot writes the rest. This is hilariously similar to the usual coding interview, which consists of a prompt and a template for a human to fill in with code. What if we replaced the human interviewee with Copilot? Would it generate good enough code to get a job?
 
