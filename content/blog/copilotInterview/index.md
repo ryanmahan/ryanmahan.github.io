@@ -58,7 +58,7 @@ function kClosest(points: number[][], k: number): number[][] {
 
 Can you spot the problem? Nothings actually ever sorted, this function just returns the input array, but sliced. In another language, this could be fixed easily with an ordered map, but in javascript maps are ordered by insertion. This code, at a glance, does look like it works though. Like Tesla's autopilot, this isn't a hands-off solution, programmers using Copilot should still expect to understand what they're contributing. My rule of thumb for copy/pasting stackoverflow answers applies well here: if you can't describe the code, you can't use the code.
 
-Lastly, I'll leave you with Copilot's solution to [counting odds](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range) between two numbers. 
+Lastly, I'll leave you with Copilot's solution to [counting odds](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range) between two numbers. It is *technically* correct.
 
 ```typescript
 // return the number of odd numbers between [low, high] 
