@@ -95,14 +95,13 @@ Content-Language: en
 }
 ```
 
-
 The level of detail here is what gives the user the ability to see into the system. It's clear what went wrong and what needs to be done to fix it. Recently I hit an API that I was unfamiliar with, Azure Blob Storage, and received a blank `409: Conflict' as a response. I barely knew what the endpoint was doing, how was I expected to know what piece of system state conflicted with what I wanted to achieve?
 
 {{% aside %}}
 Another bonus for detailed error messages is enabling your frontend to provide more visibility for the end user. An end user will appreciate an error message like "Please enter a valid color (green, red, or blue)" over a vague "Error. Please try again."
 {{% /aside %}}
 
-Outside of error messages, HTTP status codes are an excellent method of communicating system status. Using 
+Outside of error messages, HTTP status codes are an excellent method of communicating system status.
 
 <!-- ## Tolerance
 
@@ -137,7 +136,9 @@ Note, the actual schema isn't what I'm getting at. The idea is we're communicati
 
 ## Consistency
 
-When it comes to users learning how to use your API, the easiest way to kickstart their learning is to take advantage of their pre-existing knowledge. Let's look at a few social media endpoints for programmatically creating a status update:
+TODO: Graphic on consistency's effect on learning curves.
+
+By being consistent with the industry standards and within our own API, we can leverage user's past experiences to decrease our APIs learning curve. For an example of industry standard endpoints, let's look at a few social media endpoints for programmatically creating a status update:
 
 | Platform         | Endpoint                                              |
 |------------------|-------------------------------------------------------|
@@ -145,11 +146,11 @@ When it comes to users learning how to use your API, the easiest way to kickstar
 | Facebook (pages) | `POST /{feedID}/feed`                                 |
 | Instagram        | `POST /{userID}/media` then `POST /{userID}/media_publish` |
 
-Knowing these, what do you think the endpoint is for posting a status update on Mastodon is? Our previous experience says it should be a `POST`, have something to do with a `status`. In fact, it's `POST /api/v1/statuses`. See how easy that was! Consistency allows us to make easy guesses at what things *should* be, and discover the exacts of it faster.
+Knowing these, what do you think the endpoint is for posting a status update on Mastodon is? Our previous experience says it should be a `POST`, have something to do with a `status`. In fact, it's `POST /api/v1/statuses`. See how easy that was! Consistency allows us to make easy guesses at what things *should* be, and discover the exacts of it faster. This *inter*-api consistency allows the user to leverage previous experience and become familiar with our API before ever using it.
 
-Consistency matters intra-api as well. Since this is more within reach of inter-api consistency, users will expect this more. Usually you'll see people describe endpoints in a similar manner of `VERB /some-baseroute/resource`. Following this pattern lets you take advantage of inter-api consistency and forms a good rule of thumb for a team to follow.
+Another form of consistency is intra-api. Having consistency within your own endpoints allows for users to have one learning curve for your whole API, rather than having to learn each individual endpoint. Usually you'll see people describe endpoints in a similar manner of `VERB /some-baseroute/resource`. Not only will this let users learn endpoints before even using them, they may be able to deduct what a route does before ever using it.
 
-Here's an example of a public API I've had to use before:
+Here's an example of a public API I've had to use before that is internally consistent, but externally inconsistent.
 
 | Effect | Endpoint |
 |--------|----------|
@@ -158,7 +159,7 @@ Here's an example of a public API I've had to use before:
 | Link device with user | `POST /user?action='link'` |
 | Get a user's measurement | `POST /measure?action='getmeas'&meastype=enum` |
 
-This is a great example of an API that is not consistent externally, but is internally. Once you get the hang of it the API is easier to understand, but their initial learning curve is tough because of it's lack of inter-api consistency. If routes were redesigned to `GET /heart/current` and `GET /measure/temperature` people would have an easier time with the API.
+When using this API, I had to rely on documentation to begin, as I was starting with no previous experience with this organization. Once I had enough experience with the API it was much easier to use and understand. If routes were redesigned to `GET /heart/current` and `GET /measure/temperature` people would be able to skip the initial learning curve. While there are no doubt benefits to their route organization, inter-api consistency has value and shouldn't be ignored.
 
 {{% aside %}}
 That pattern of `VERB /nouns/IDs/more-nouns` is a good rule of thumb, but won't fit every case. When you get a route that you're not sure what to do with just ask yourself, "What would I expect if I were using this API?" and you'll find a decent answer. I've seen certain actions, like checking a todo item, noun-ified via `PUT /todo/{todoID}/check` with a body of `true/false`.
@@ -168,7 +169,7 @@ That pattern of `VERB /nouns/IDs/more-nouns` is a good rule of thumb, but won't 
 
 Discoverability is another principle that effects how easy it is for users to learn your interface. A `discoverable` interface is one that exposes what's possible to the user easily. This is separate from documentation, the goal is for the user to learn without outside help. This doesn't replace documentation either, having a knowledge base that supplements discoverability is another good principle to follow.
 
-GraphQL, a query language I am admittedly not familiar with, has it's [introspection](https://graphql.org/learn/introspection/) capability. OpenAPI standards are a great way to replicate a similar discoverability as well. If we have those definitions already for documentation, why not include them under some routes for API users? Imagine you have a route on an api and you don't know what it returns. If the API was discoverable you could, wihtout opening another Chrome tab, just hit `OPTIONS /api/v1/pets`.
+GraphQL's playground has it's schema and docs enabled by the API and query language. OpenAPI standards are a great way to communicate API endpoints as well. If we have those definitions already for documentation, why not include them under some routes for API users? Imagine you have a route on an api and you don't know what it returns. If the API was discoverable you could, without opening another Chrome tab, just hit `OPTIONS /api/v1/pets`.
 
 ```json
 {
@@ -188,3 +189,13 @@ GraphQL, a query language I am admittedly not familiar with, has it's [introspec
   ...
 }
 ```
+
+## It's all about communication
+
+When it comes to design, you're building affordances for the user that communicate possibilities and features they can take advantage of. APIs don't have a visual component to be able to convey affordances, so we have to use the limitations of sending plaintext and JSON to communicate. We can incorporate this communication in many ways with different tradeoffs.
+
+
+
+OUTLINE:
+
+Communication through API response mediums is key. Machine readability is achievable through standard formats.
