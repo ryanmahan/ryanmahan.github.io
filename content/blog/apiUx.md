@@ -64,15 +64,19 @@ Keep it simple stupid. Grug hate complexity
 
  -->
 
-Why don't we, as developers, care as much about the user experience of our APIs? I find we often ignore the interface between frontend and backend, creating confusing, esoteric endpoints that "only one team will use, so what does it matter?" Well, it's only one team *right now*, and why not create a good experience for them? Secondly, an API with a good user experience also happens to be well-organized, easily debugged, and fast to learn.
+## It's all about communication
+
+# TODO: Cleanup intro
+
+A traditional user interface has many different methods of communicating with it's user. My iPhone has a screen, speaker, vibrator, physical switches, and a camera flash that all get used for the notification system. With so many modalities to communicate through, it's no wonder the user experience is robust and intuitive. APIs have very few methods of communication and they're essentially all the same version of plaintext or encodings. This makes for an interesting design challenge, how can we create robust user experiences with our limited communication ability?
 
 Taking [Georgia Tech's Human Computer Interaction](https://omscs6750.gatech.edu/) course recently opened my eyes to all the usability violations I commonly see in APIs. Namely the APIs that are never meant to be seen by the public. APIs are a human-computer interaction when being developed and used, so we should follow user centric design heuristics to create a better developer experience, and ultimately better organized APIs.
 
-So how can we approach API design, something inherently technical and in the weeds, with user centric design? Well, to start us off, let's look at some of the design heuristics taught by Professor Joyner in HCI. If you're interested, you can out check the [course website)](https://omscs6750.gatech.edu/).
+So how can we approach API design, something inherently technical and in the weeds, with user centric design?Let's look at some of the design heuristics taught by Professor Joyner in HCI and apply them to backend web development. If you're interested, you can out check the [course website](https://omscs6750.gatech.edu/).
 
 ## Visibility
 
-Visibility, also called perceptibility, is the ability for your user to understand the state of the system. This is the principle our example of `200 OK` "error failed successfully" response is violating (along with about a dozen RFCs). This message doesn't tell me anything, in fact it tells me the exact opposite of what the system's state really is.
+Visibility, also called perceptibility, is the ability for your user to understand the state of the system. HTTP already has a status code for developers to use but leaves out a tremendous amount of detail when used alone. A 400 error could be many things when implemented properly and hundreds of things when used instead of more detailed 4xx error codes.
 
 When it comes to errors, [RFC 7807 "Problem Details for HTTP APIs"](https://datatracker.ietf.org/doc/html/rfc7807) details a fantastic method for exposing system state:
 
@@ -100,8 +104,6 @@ The level of detail here is what gives the user the ability to see into the syst
 {{% aside %}}
 Another bonus for detailed error messages is enabling your frontend to provide more visibility for the end user. An end user will appreciate an error message like "Please enter a valid color (green, red, or blue)" over a vague "Error. Please try again."
 {{% /aside %}}
-
-Outside of error messages, HTTP status codes are an excellent method of communicating system status.
 
 <!-- ## Tolerance
 
@@ -189,11 +191,6 @@ GraphQL's playground has it's schema and docs enabled by the API and query langu
   ...
 }
 ```
-
-## It's all about communication
-
-When it comes to design, you're building affordances for the user that communicate possibilities and features they can take advantage of. APIs don't have a visual component to be able to convey affordances, so we have to use the limitations of sending plaintext and JSON to communicate. We can incorporate this communication in many ways with different tradeoffs.
-
 
 
 OUTLINE:
