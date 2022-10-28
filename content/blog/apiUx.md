@@ -64,46 +64,45 @@ Keep it simple stupid. Grug hate complexity
 
  -->
 
-## It's all about communication
+## It's all communication
 
-# TODO: Cleanup intro
+A traditional user interface has many different methods of communicating with it's user. My iPhone has a screen, speaker, vibrator, physical switches, and a camera flash that all get used for the notification system. With so many modalities to communicate through, it's no wonder the user experience is robust and intuitive. APIs have a lack of communication methods, relying mostly on structured text that needs to be both machine and human readable. When faced with this constraint, how can we create robust user experiences with our limited communication ability?
 
-A traditional user interface has many different methods of communicating with it's user. My iPhone has a screen, speaker, vibrator, physical switches, and a camera flash that all get used for the notification system. With so many modalities to communicate through, it's no wonder the user experience is robust and intuitive. APIs have very few methods of communication and they're essentially all the same version of plaintext or encodings. This makes for an interesting design challenge, how can we create robust user experiences with our limited communication ability?
+I recently took Georgia Tech's Human Computer Interaction (HCI) course taught by Professor David Joyner. During the course we discuss many different design heuristics that apply well to the user interface of applications. If we start thinking of API endpoints and messages as a user interface we can improve the usability for our consumers whether they be developers, researchers, or even our future selves. Let's look at a few design heuristics and how they can be applied to backend web development.
 
-Taking [Georgia Tech's Human Computer Interaction](https://omscs6750.gatech.edu/) course recently opened my eyes to all the usability violations I commonly see in APIs. Namely the APIs that are never meant to be seen by the public. APIs are a human-computer interaction when being developed and used, so we should follow user centric design heuristics to create a better developer experience, and ultimately better organized APIs.
-
-So how can we approach API design, something inherently technical and in the weeds, with user centric design?Let's look at some of the design heuristics taught by Professor Joyner in HCI and apply them to backend web development. If you're interested, you can out check the [course website](https://omscs6750.gatech.edu/).
+{{% aside %}}
+If you're looking to learn more about HCI you can check out the [course website](https://omscs6750.gatech.edu/), and view the public course videos [here](https://omscs.gatech.edu/cs-6750-human-computer-interaction-course-videos). If you wan't to know more about the Online Masters in Computer Science (OMSCS) program, reach out on linkedIn! I've had a wonderful experience and would love to share.
+{{% /aside %}}
 
 ## Visibility
 
-Visibility, also called perceptibility, is the ability for your user to understand the state of the system. HTTP already has a status code for developers to use but leaves out a tremendous amount of detail when used alone. A 400 error could be many things when implemented properly and hundreds of things when used instead of more detailed 4xx error codes.
+Visibility, also known as perceptibility, is the ability for your user to understand the state of the system. HTTP has defined [status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) for a system state shorthand already. When an API returns a 4xx or 5xx error code our user has one goal -- figure out what the error is and how to fix it. A blank 400 response could mean many things when returned without a message, leaving our user stranded.
 
 When it comes to errors, [RFC 7807 "Problem Details for HTTP APIs"](https://datatracker.ietf.org/doc/html/rfc7807) details a fantastic method for exposing system state:
 
 ```json
-HTTP 400 Bad Request
+HTTP/1.1 403 Forbidden
 Content-Type: application/problem+json
 Content-Language: en
 
 {
-"type": "https://example.net/validation-error",
-"title": "Your request parameters didn't validate.",
-"invalid-params": [{
-    "name": "age",
-    "reason": "must be a positive integer"
-  },
-  {
-    "name": "color",
-    "reason": "must be 'green', 'red' or 'blue'"
-  }]
+  "type": "https://example.com/probs/out-of-credit",
+  "title": "You do not have enough credit.",
+  "detail": "Your current balance is 30, but that costs 50.",
+  "instance": "/account/12345/msgs/abc",
+  "balance": 30,
+  "accounts": ["/account/12345",
+                "/account/67890"]
 }
 ```
 
-The level of detail here is what gives the user the ability to see into the system. It's clear what went wrong and what needs to be done to fix it. Recently I hit an API that I was unfamiliar with, Azure Blob Storage, and received a blank `409: Conflict' as a response. I barely knew what the endpoint was doing, how was I expected to know what piece of system state conflicted with what I wanted to achieve?
+The level of detail here is what gives the user the ability to see into the system. It's clear what went wrong and what needs to be done to fix it. Recently I hit an API that I was in the process of learning, Azure Blob Storage, and received a blank `409: Conflict` as a response. Azure has [44 errors](https://learn.microsoft.com/en-us/rest/api/storageservices/blob-service-error-codes) that resolve to `409 Conflict`, so how was I supposed to know what the source was?
+
+We can scrap quite a bit from this RFC's example and still achieve better usability than Azure here. A simple title with the error code would at least give me something to search for online and a description might help me avoid having to search altogether. When meeting the proposed RFC at it's minimum, the `type` hyperlink, a `title`, and the HTTP status code, we create better system clarity for our user.
 
 {{% aside %}}
-Another bonus for detailed error messages is enabling your frontend to provide more visibility for the end user. An end user will appreciate an error message like "Please enter a valid color (green, red, or blue)" over a vague "Error. Please try again."
-{{% /aside %}}
+Another bonus for detailed error messages is enabling your frontend to provide more visibility for the end user. Your frontend displaying a backend fed error message of "Your current balance is 30, but that costs 50." is leagues better over a vague "An error occured. Please try again later."
+{{% /aside %}} 
 
 <!-- ## Tolerance
 
@@ -169,12 +168,34 @@ That pattern of `VERB /nouns/IDs/more-nouns` is a good rule of thumb, but won't 
 
 ## Discoverability
 
-Discoverability is another principle that effects how easy it is for users to learn your interface. A `discoverable` interface is one that exposes what's possible to the user easily. This is separate from documentation, the goal is for the user to learn without outside help. This doesn't replace documentation either, having a knowledge base that supplements discoverability is another good principle to follow.
+Discoverability is another principle that effects how easy it is for users to learn and find the features of your interface. A discoverable interface is one that exposes what's possible to the user easily. In a Web UI, a good example is keyboard shortcut hints or descriptive tooltips on icons. Unlike documentation, the goal is for the user to learn without reference material. This doesn't replace documentation, having a knowledge base that supplements discoverability is another good principle to follow.
 
-GraphQL's playground has it's schema and docs enabled by the API and query language. OpenAPI standards are a great way to communicate API endpoints as well. If we have those definitions already for documentation, why not include them under some routes for API users? Imagine you have a route on an api and you don't know what it returns. If the API was discoverable you could, without opening another Chrome tab, just hit `OPTIONS /api/v1/pets`.
+The Hypermedia As The Engine Of Application State (HATEOS) constraint part of REST handles discoverability well. In requests HATEOS dictates including links to other endpoints related to a resource. When requesting `GET /account/12345` the application responds with links to other resources that the user can request. The user has to do little to no work to discover how to find the deposit history of an acocunt. If the tool is internally consistent this also allows the user to infer other routes like creating a deposit or withdrawl. 
+
 
 ```json
 {
+    "account": {
+        "account_number": 12345,
+        "balance": {
+            "currency": "usd",
+            "value": 100.00
+        },
+        "links": {
+            "deposits": "/accounts/12345/deposits",
+            "withdrawals": "/accounts/12345/withdrawals",
+            "transfers": "/accounts/12345/transfers",
+            "close-requests": "/accounts/12345/close-requests"
+        }
+    }
+}
+```
+
+After seeing this response, it's simple to find the related resources. No guesswork on how to find more information regarding the account. The routes are also prepopulated with the correct IDs, making machine readability easier. A system navigating your API can do so more consistently with server supplied links.
+
+The OpenAPI standard provides an externally consistent method of documenting APIs. Documentation isn't discoverability, but there are ways we can incorporate the OpenAPI information into our API to increase discoverability. One option would be to introduce routes to get the relavent OpenAPI information. Something like an `OPTIONS /pets` call could return the OpenAPI information regarding pets:
+
+```json
   "/pets": {
     "get": {
       "description": "Returns all pets from the system that the user has access to",
@@ -187,12 +208,7 @@ GraphQL's playground has it's schema and docs enabled by the API and query langu
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/pet"
-                }
   ...
-}
 ```
 
-
-OUTLINE:
-
-Communication through API response mediums is key. Machine readability is achievable through standard formats.
+With these methods developers could receive information about your API without leaving their current tools and train of thought. This is what discoverability is about, allowing users to learn your interface in their current setting without having to context switch out of their current task.
