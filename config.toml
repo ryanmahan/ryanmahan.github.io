@@ -70,6 +70,10 @@ googleAnalytics                 = "G-KNZB2ZFE3S"                     # https://g
         icon  = "github" # icon name without the 'fa-'
         icon_pack = "fab"
     [[params.social]]
+        url = "https://mastodon.online/@ryanmahan"
+        icon = "mastodon"
+        icon_pack = "fab"
+    [[params.social]]
         url = "mailto:ryanmahan97@gmail.com"  # For a direct email link, use "mailto:test@example.org".
         icon = "paper-plane" # icon name without the 'fa-'
         icon_pack = "fas"
