@@ -64,6 +64,8 @@ Keep it simple stupid. Grug hate complexity
 
  -->
 
+<img alt='a confused computer' src='confused.png'/>
+
 ## It's all communication
 
 A traditional user interface has many different methods of communicating with it's user. My iPhone has a screen, speaker, vibrator, physical switches, and a camera flash that all get used for the notification system. With so many modalities to communicate through, it's no wonder the user experience is robust and intuitive. APIs have a lack of communication methods, relying mostly on structured text that needs to be both machine and human readable. When faced with this constraint, how can we create robust user experiences with our limited communication ability?
@@ -147,7 +149,7 @@ By being consistent with the industry standards and within our own API, we can l
 | Facebook (pages) | `POST /{feedID}/feed`                                 |
 | Instagram        | `POST /{userID}/media` then `POST /{userID}/media_publish` |
 
-Knowing these, what do you think the endpoint is for posting a status update on Mastodon is? Our previous experience says it should be a `POST`, have something to do with a `status`. In fact, it's `POST /api/v1/statuses`. See how easy that was! Consistency allows us to make easy guesses at what things *should* be, and discover the exacts of it faster. This *inter*-api consistency allows the user to leverage previous experience and become familiar with our API before ever using it.
+Knowing these, what do you think the endpoint is for posting a status update on Mastodon is? Our previous experience says it should be a `POST`, have something to do with a `status`. In fact, it's `POST /api/v1/statuses`. See how easy that was! Consistency allows us to make easy guesses at what things *should* be, and discover the exacts of it faster. This external consistency allows the user to leverage previous experience and become familiar with our API before ever using it.
 
 Another form of consistency is intra-api. Having consistency within your own endpoints allows for users to have one learning curve for your whole API, rather than having to learn each individual endpoint. Usually you'll see people describe endpoints in a similar manner of `VERB /some-baseroute/resource`. Not only will this let users learn endpoints before even using them, they may be able to deduct what a route does before ever using it.
 
@@ -165,6 +167,10 @@ When using this API, I had to rely on documentation to begin, as I was starting 
 {{% aside %}}
 That pattern of `VERB /nouns/IDs/more-nouns` is a good rule of thumb, but won't fit every case. When you get a route that you're not sure what to do with just ask yourself, "What would I expect if I were using this API?" and you'll find a decent answer. I've seen certain actions, like checking a todo item, noun-ified via `PUT /todo/{todoID}/check` with a body of `true/false`.
 {{% /aside %}}
+
+<!-- there's something here, I can feel it -->
+<!-- API consistency will lend to better code quality as well. With similar functionality between endpoints comes opportunities for abstraction.  -->
+A consistent API is a well-organized one. With a better organized interface your codebase will likely be better organized as well. It makes sense to have an overall base class for a resource that contains functions for endpoints. Popular frameworks organize controllers and routes within them for this reason. 
 
 ## Discoverability
 
