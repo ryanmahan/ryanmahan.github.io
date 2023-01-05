@@ -62,7 +62,7 @@ googleAnalytics                 = "G-KNZB2ZFE3S"                     # https://g
     #     icon  = "facebook-f" # icon name without the 'fa-'
     #     icon_pack = "fab"
     [[params.social]]
-        url   = "https://linkedin.com/in/ryanmahan"
+        url   = "https://linkedin.com/in/ryan-mahan"
         icon  = "linkedin-in" # icon name without the 'fa-'
         icon_pack = "fab"
     [[params.social]]
